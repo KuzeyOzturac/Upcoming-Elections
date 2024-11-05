@@ -114,7 +114,7 @@ git push origin feature/YourFeatureName
 6. **Open a Pull Request**
 Go to your fork on GitHub and open a pull request to the main repository.
 
-##Contact
+## Contact
 If you have any questions, suggestions, or issues, feel free to open an issue on GitHub or contact me at kuzeyozturac2@gmail.com.
 
 
