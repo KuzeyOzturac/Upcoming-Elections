@@ -57,6 +57,17 @@ def scrape_elections(url):
                 text = country_year_pattern.sub('', text).strip()
                 # Extract the election name up to the first comma
                 election_name = text.split(',')[0].strip()
+                # Extract the link to the election page
+                link_tag = li.find('a', href=True)
+                if link_tag:
+                    link_href = link_tag['href']
+                    link = 'https://en.wikipedia.org' + link_href
+                    # Only include links that point to election pages
+                    if 'election' not in link_href.lower():
+                        continue  # Skip this entry if it's not an election page
+                else:
+                    continue  # Skip if there's no link
+
                 # Attempt to parse all dates from the text
                 date_strings = date_regex.findall(text)
                 parsed = False
@@ -80,6 +91,7 @@ def scrape_elections(url):
                                 'election': election_name,
                                 'country': country,
                                 'region': region,
+                                'link': link,
                                 'sort_date': election_date_normalized  # Added for sorting
                             })
                             parsed = True
@@ -104,9 +116,9 @@ def scrape_elections(url):
         for election in elections_list:
             print(f"Date: {election['date']}")
             print(f"Election: {election['election']}")
-            # Uncomment the next line if you want to include the country
-            # print(f"Country: {election['country']}")
-            print(f"Region: {election['region']}\n")
+            #print(f"Country: {election['country']}")
+            print(f"Region: {election['region']}")
+            print(f"Link: {election['link']}\n")
     else:
         print("No upcoming elections found before the end of this year.")
 
