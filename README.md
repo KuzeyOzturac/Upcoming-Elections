@@ -44,33 +44,15 @@ Election Scraper is a Python script that fetches upcoming election information f
 
 ## Example Output
 ```yaml
-Upcoming Elections Before the End of This Year:
-
-Date: 07 January 2024
-Election: Bangladeshi general election
-Region: Asia
-
-Date: 14 January 2024
-Election: Comorian presidential election
+Date: 07 December 2024
+Election: 2024 Ghanaian general election
 Region: Africa
+Link: https://en.wikipedia.org/wiki/2024_Ghanaian_general_election
 
-Date: 14 February 2024
-Election: Indonesian general election
-Region: Asia
-
-Date: 01 March 2024
-Election: Iranian legislative election
-Region: Asia
-
-Date: 10 April 2024
-Election: South Korean legislative election
-Region: Asia
-
-Date: 05 November 2024
-Election: United States elections
-Region: Americas
-
-...
+Date: 29 December 2024
+Election: 2024 Chadian parliamentary election
+Region: Africa
+Link: https://en.wikipedia.org/wiki/2024_Chadian_parliamentary_election
 ```
 ## Dependencies
 The project relies on the following Python libraries:
