@@ -34,3 +34,10 @@ Election Scraper is a Python script that fetches upcoming election information f
    ```bash
    git clone https://github.com/yourusername/election-scraper.git
    cd election-scraper
+
+## Usage
+   '''python
+   from scrape import scrape_elections
+   url = 'https://en.wikipedia.org/wiki/List_of_elections_in_2024'
+   scrape_elections(url)
+
